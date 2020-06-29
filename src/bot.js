@@ -102,6 +102,9 @@ async function startBot() {
       }
     } else {
       console.log("THE END\n");
+      /*
+        set questions for repeat from start
+      */
       bot.setQuestions(questions);
     }
   }
