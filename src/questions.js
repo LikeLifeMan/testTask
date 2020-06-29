@@ -7,7 +7,7 @@ const questions = {
         {
           question: "How to register",
           info:
-            "Go to https://www.chaport.com and click SignUp button!\nThen follow instructions."
+            "Go to host://site and click SignUp button!\nThen follow instructions."
         },
         {
           question: "How to delete my account",
