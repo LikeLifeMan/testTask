@@ -18,8 +18,8 @@ class Bot {
   }
 
   /**
-   *  check for last question in tree
-   *  (if element have only one child - that is the answer)
+   *  check if current element have 2 or more childs
+   *  (if have - then it is not answer)
    */
   isNextQuestionAvailable() {
     return !!this.currentQuestion && Array.isArray(this.currentQuestion.childs)
