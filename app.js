@@ -1,4 +1,8 @@
 const startBot = require("./src/bot");
 
 console.clear();
-startBot(); // run main app loop
+
+// run main app loop
+startBot()
+  .catch(console.error)
+  .then(() => console.log("An error occurred!"));

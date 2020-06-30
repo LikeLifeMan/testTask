@@ -2,15 +2,15 @@ const questions = require("./questions");
 const { ask, shutdown } = require("./utils");
 
 /*
-   class bot (uses as state machine)
-*/
+     class bot (uses as state machine)
+ */
 class Bot {
   constructor(botData) {
     this.currentQuestion = botData;
   }
 
   /*
-    set tree with questions
+     set tree with questions
   */
   setQuestions(botData) {
     this.currentQuestion = botData;
