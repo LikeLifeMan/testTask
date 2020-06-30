@@ -2,7 +2,7 @@
 const startBot = require('./src/bot');
 
 console.clear();
-console.log('Type "exit" to exit from program','\n');
+console.log('Type "exit" to exit from program', '\n');
 
 // run main app loop
 startBot()
