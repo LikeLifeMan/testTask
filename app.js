@@ -1,8 +1,8 @@
-const startBot = require("./src/bot");
+const startBot = require('./src/bot');
 
-console.clear();
+console.clear(); // eslint-disable-line no-console
 
 // run main app loop
 startBot()
-  .catch(console.error)
-  .then(() => console.log("An error occurred!"));
+  .then(console.log) // eslint-disable-line no-console
+  .catch(console.error); // eslint-disable-line no-console

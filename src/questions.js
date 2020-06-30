@@ -1,62 +1,81 @@
+/**
+ *  The tree consists of the following elements:
+ *  {
+ *     title: 'text of user menu item',
+ *     childs: [ array of children elements with some structure ],
+ *  }
+ */
 const questions = {
-  question: "Hi, How can I help you?",
-  variants: [
+  title: 'Hi, How can I help you?',
+  childs: [
     {
-      question: "I have a question",
-      variants: [
+      title: 'I have a question',
+      childs: [
         {
-          question: "How to register",
-          info:
-            "Go to host://site and click SignUp button!\nThen follow instructions."
+          title: 'How to register',
+          childs: [
+            { title: 'Go to host://site and click SignUp button!\nThen follow instructions.' },
+          ],
         },
         {
-          question: "How to delete my account",
-          info:
-            "Please login, then go to your personal account and click the delete account button"
-        }
-      ]
+          title: 'How to delete my account',
+          childs: [
+            { title: 'Please login, then go to your personal account and click the delete account button' },
+          ],
+        },
+      ],
     },
     {
-      question: "I have a bug report",
-      variants: [
+      title: 'I have a bug report',
+      childs: [
         {
-          question: "Site bug report",
-          variants: [
+          title: 'Site bug report',
+          childs: [
             {
-              question: "You found a typo?",
-              info: "Please, email at some@email.me"
+              title: 'You found a typo?',
+              childs: [
+                { title: 'Please, email at some@email.me' },
+              ],
             },
             {
-              question: "You found a broken link?",
-              info: "Please, email at some@email.me"
-            }
-          ]
+              title: 'You found a broken link?',
+              childs: [
+                { title: 'Please, email at some@email.me' },
+              ],
+            },
+          ],
         },
         {
-          question: "Widget bug report",
-          variants: [
+          title: 'Widget bug report',
+          childs: [
             {
-              question: "Widget not working!",
-              variants: [
+              title: 'Widget not working!',
+              childs: [
                 {
-                  question: "Widget does not appear on page!",
-                  info: "Please, check api token in personal cabinet"
+                  title: 'Widget does not appear on page!',
+                  childs: [
+                    { title: 'Please, check api token in personal cabinet' },
+                  ],
                 },
                 {
-                  question: "Color scheme not applicable!",
-                  info: "Please, read setup documentation!"
-                }
-              ]
+                  title: 'Color scheme not applicable!',
+                  childs: [
+                    { title: 'Please, read setup documentation!' },
+                  ],
+                },
+              ],
             },
             {
-              question: "No settings applied!",
-              info: "Please, read setup documentation!"
-            }
-          ]
-        }
-      ]
-    }
-  ]
+              title: 'No settings applied!',
+              childs: [
+                { title: 'Please, read setup documentation!' },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ],
 };
 
 module.exports = questions;

@@ -1,17 +1,14 @@
-const readline = require("readline");
+const readline = require('readline');
 
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
+  output: process.stdout,
 });
 
-module.exports.ask = function(questionText) {
-  return new Promise((resolve, reject) => {
-    rl.question(questionText, input => resolve(input));
-  });
-};
+module.exports.ask = (text) => new Promise((resolve) => {
+  rl.question(text, (input) => resolve(input));
+});
 
-module.exports.shutdown = function() {
+module.exports.shutdown = () => {
   rl.close();
-  process.exit(0);
 };
