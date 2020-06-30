@@ -22,10 +22,8 @@ class Bot {
    *  (if element have only one child - that is the answer)
    */
   isNextQuestionAvailable() {
-    return !!this.currentQuestion && (
-      Array.isArray(this.currentQuestion.childs)
-      && this.currentQuestion.childs.length > 1
-    );
+    return !!this.currentQuestion && Array.isArray(this.currentQuestion.childs)
+      && this.currentQuestion.childs.length > 1;
   }
 
   /**
@@ -74,7 +72,8 @@ class Bot {
 /**
  *  create bot with init data
  */
-const bot = new Bot(questions);
+const bot = new Bot();
+bot.setQuestions(questions);
 
 /**
  *  Bot main loop
