@@ -1,8 +1,10 @@
+/* eslint-disable no-console */
 const startBot = require('./src/bot');
 
-console.clear(); // eslint-disable-line no-console
+console.clear();
+console.log('Type "exit" to exit from program','\n');
 
 // run main app loop
 startBot()
-  .then(console.log) // eslint-disable-line no-console
-  .catch(console.error); // eslint-disable-line no-console
+  .then(console.log)
+  .catch(console.error);

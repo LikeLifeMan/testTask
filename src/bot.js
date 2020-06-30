@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const questions = require('./questions');
 const { ask, shutdown } = require('./utils');
 
@@ -36,12 +37,11 @@ class Bot {
     }
     if (this.isNextQuestionAvailable()) {
       // print question with variants
-      console.log(this.currentQuestion.title, '\n'); // eslint-disable-line no-console
+      console.log(this.currentQuestion.title, '\n');
       if (
         Array.isArray(this.currentQuestion.childs)
         && this.currentQuestion.childs.length > 1
       ) {
-        // eslint-disable-next-line no-console
         console.log(
           this.currentQuestion.childs
             .map((item, i) => `${i}  ${item.title}`)
@@ -52,7 +52,7 @@ class Bot {
       Array.isArray(this.currentQuestion.childs) && this.currentQuestion.childs.length > 0
     ) {
       // print answer
-      console.log(this.currentQuestion.childs[0].title, '\n'); // eslint-disable-line no-console
+      console.log(this.currentQuestion.childs[0].title, '\n');
     }
   }
 
@@ -99,14 +99,14 @@ async function startBot() {
 
       // try apply user choice
       if (!bot.applyAnswer(ans)) {
-        console.log("I don't understand, please repeat!\n"); // eslint-disable-line no-console
+        console.log("I don't understand, please repeat!\n");
       }
     } else {
-      console.log('THE END\n'); // eslint-disable-line no-console
-      bot.setQuestions(questions); // set questions for repeat from start
+      console.log('THE END\n');
+      bot.setQuestions(questions);
     }
   }
-  return '\nGood bye!'; // new Promise.resolve(true);
+  return '\nGood bye!'; // or new Promise.resolve('\nGood bye!');
 }
 
 module.exports = startBot;
